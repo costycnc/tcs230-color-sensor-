@@ -63,6 +63,9 @@ void loop() {
   if(R > 150 && G > 150 && B > 150) {
     Serial.println("Colore dominante: BIANCO");
   }
+  else if (R > 150 && G > 150 && B < 150) {
+    Serial.println("Colore dominante: GIALLO");
+  } 
   else if (R > G && R > B) {
     Serial.println("Colore dominante: ROSSO");
   } 
