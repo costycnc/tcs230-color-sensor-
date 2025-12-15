@@ -9,7 +9,7 @@ const unsigned long R_min = 100;  // nero
 const unsigned long R_max = 285;  // bianco
 const unsigned long G_min = 80;
 const unsigned long G_max = 274;
-const unsigned long B_min = 132;
+const unsigned long B_min = 125;
 const unsigned long B_max = 408;
 
 void setup() {
@@ -63,6 +63,9 @@ void loop() {
   if(R > 150 && G > 150 && B > 150) {
     Serial.println("Colore dominante: BIANCO");
   }
+  else if (R < 75 && G < 75 && B < 75) {
+    Serial.println("Colore dominante: NERO");
+  } 
   else if (R > 150 && G > 150 && B < 150) {
     Serial.println("Colore dominante: GIALLO");
   } 
